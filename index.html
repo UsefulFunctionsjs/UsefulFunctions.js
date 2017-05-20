@@ -1,8 +1,205 @@
 
-Useful Functions JS is a downloadable library with a few useful functions. It is made for javascript.
+<html>
+<title>Useful Functions JS</title>
+<div class="tab">
+  <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'download')">Download</button>
+  <button class="tablinks" onclick="openTab(event, 'Documentation')">Documentation</button>
+  <button class="tablinks" onclick="openTab(event, 'Aplication')">Aplication And What's New</button>
+</div>
+
+<div id="download" class="tabcontent">
+  <center>
+  Useful Functions JS is a downloadable library with a few useful functions. I use them a lot, <br>and I thought it would be great to make the whole world have access to them.
 <br>
 <a href="UsefulFunctions.js" download>Download Here!</a>
   <br><br>
-  <p><b>Note:</b> The download is not supported in Edge version 12, IE, Safari or Opera version 12 (and earlier).<br>
+  <p><b>Note:</b> This download is not supported in Edge version 12, IE, Safari or Opera version 12 (and earlier).<br>
                   If you are using one of the browsers, please download Google Chrome or Firefox, or an updated <br>
-                  version of Edge or IE</p>
+                  version of Edge or IE</p></center>
+</div>
+
+<div id="Documentation" class="tabcontent">
+  <img class ="img1" src="ScreenShot.png">
+  
+  <br>
+  <center>
+  	<i>
+  		Just a small snipet of code from Useful Functions JS holds so many valuable functions. 
+  	</i>
+  	<br>
+  	<h3>Function 1: euclidean</h3>
+  	This is a function that uses Euclides' formula to find the distance between two points on a two dimensional plane. The formula is: √ |x1-x2|²+|y1-y2|². The square root covers everything. X1 and y1 are the x and y positions of the first point (x1, y1) and x2 and y2 are the x and y positions of the second point (x2,y2). For example, <code>euclidean(1,1,5,4) </code>would compute to 5. <br><br><h4>Here is the code:</h4><br>  </center>
+
+  	<code>function euclidean(x1,y1,x2,y2) {<br>
+		
+			return(Math.sqrt(Math.pow((Math.abs(x1-x2)),2)+Math.pow((Math.abs(y1-y2)),2)));</code>
+<br><br> <br><center>
+	 <h3>Functions 2 and 3: randInt and randNum</h3>
+	 These two functions are very simaler. The first one, randInt, returns a random integer between the first argument and the second argument. The other one, randNum, returns a random <b> number</b> between the first argument and the second argument. They inculde the first argument, but not the second. The difference is the second one may have a decimal, but the first one cannot. For example, if you did randInt(3,5), it would output 3, 4, or 5. If you did randNum(3,5), it may output something like 3.4489780582942267. 
+<br><br><h4>Here is the code, starting with randInt and then randNum:</h4><br>  </center>
+
+    <code>function randInt(int1, int2) {
+  
+  return(Math.floor(Math.random()*(int2-int1)+int1));
+<br>}
+<br><br><br><br>
+
+function randNum(num1, num2) {<br>
+  return(Math.random()*(num2-num1)+num1);
+<br>}</code>
+<br> <br><center>
+<h3>Function 4: sum</h3>This function is very simple. All it does is return the sum of all numbers in a list given to it. For example, if you did sum([1,2,3]), it would return 6. <br><br><h4>Here is the code:</h4><br>  </center>
+
+    <code>function sum(mylist) {<br>
+  var mysum = 0;<br>
+  for (var i = 0; i < mylist.length; i++) {<br>
+    mysum += mylist[i];<br>
+    }<br>
+  return (mysum);
+<br>}</code>
+<br><br> <br><center><h3>Function 5: mean</h3>
+This function is also simple. It finds the average, or mean, of a list of numbers by adding them up (using the sum function) and then dividing by the number of numbers.<br><br><h4>Here is the code:</h4><br>  </center>
+
+    <code>function mean(mylist) {<br>
+  var av = sum(mylist);<br>
+  
+  return(av/mylist.length);<br>
+
+}</code>
+<br><br> <br><center><h3>Functions 6 and 7: max and min</h3>
+These functions are simaler, yet opposites. Max returns the highest number in a list, while min returns the lowest. So, if you did max([3,4,5]), you would get 5, but if you did min([3,4,5]), you would get 3.<br><br><h4>Here is the code, starting with max, then min:</h4><br>  </center>
+
+    <code>function max(mylist) {<br>
+  var greatest=mylist[0];<br>
+  for (var i = 0; i < mylist.length; i++) {<br>
+    if(mylist[i] > greatest){<br>
+      greatest=mylist[i];<br>
+    }<br>
+  
+  }<br>
+return(greatest)<br><br><br><br>
+
+
+function min(mylist) {<br>
+  var least=mylist[0];<br>
+  for (var i = 0; i < mylist.length; i++) {<br>
+    if(mylist[i] < least){<br>
+      least=mylist[i];<br>
+    }<br>
+  
+  }<br>
+return(least)<br>
+}<br>
+</code>
+<br><br> <br><center><h3>Function 8: overThreshold</h3>
+This functions returns how many numbers are over a threahold, t. For example, if you did overThreshold([5,6,7,8,9], 6), you would get 3 because only 7, 8 and 9 are greater than 6. If you would like to have the amount of numbers under a threshold, you can do 5 - overThreshold([5,6,7,8,9], 6). You would do 5 because that is how many numbers there are.<br><br><h4>Here is the code:</h4><br>  </center>
+
+    <code>function overThreshold(mylist, t){<br>
+  var over=0;<br>
+  for (var i = 0; i < mylist.length; i++) {<br>
+    if (mylist[i] > t){<br>
+      over ++;<br>
+    }<br>
+  }<br>
+  return(over)<br>
+}
+</code>
+
+</div>
+
+<div id="Aplication" class="tabcontent">
+  Once downloading, you can very easily apply useful functions js to your HTML script (it is okay to have other languages with HTML, but this needs to be in the HTML part) by simply doing the following. Step 1: move useful functions js to the same folder as the project you want to use it in. Step 2: in the HTML section, in a script tag, type this: src="file name goes here". Note: do not type it in the middle of the script and the /script, write it in the first script, before the >. Step 3: use the functions like you normally would.<br><br>Nothing new, yet!
+</div>
+
+<style type="text/css">
+	/*Style an image*/
+	.img1{
+		padding-left:20px
+		padding-right:20px;
+		
+		width:100%;
+		height:70%;
+	}
+	/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: none;
+    background-color: none;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    width:33%;
+    background-color: #f1f1f1;
+    float: left;
+    border: 1px solid darkgrey;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 10px;
+    /*border: 1px solid #ccc;*/
+    border-top: none;
+}
+
+    
+}
+</style>
+<script type="text/javascript">
+	
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+   
+}
+
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+ 
+
+
+</script>
+<br><br>
+
+
+
+
+</html>
