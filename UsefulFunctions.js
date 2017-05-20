@@ -1,3 +1,4 @@
+
 // Finds the distance between 2 points on 2D plane using their x and y positions.
 function euclidean(x1,y1,x2,y2) {
 		
@@ -16,10 +17,12 @@ function randNum(num1, num2) {
 }
 //Finds the sum of the numbers in "mylist".
 function sum(mylist) {
-	var mysum = 0
+ 	var mysum = 0
 	for (var i = 0; i < mylist.length; i++) {
 		mysum += mylist[i]
 		}
+	return mysum
+}
 //Finds the mean, or average of the numbers in "mylist".
 function mean(mylist) {
 	var av = sum(mylist)
@@ -51,7 +54,7 @@ return(least)
 }
 //Finds how many numbers in "mylist" that are over the threshold, "t".
 function overThreshold(mylist, t){
-	over=0
+	var over=0
 	for (var i = 0; i < mylist.length; i++) {
 		if (mylist[i] > t){
 			over ++
@@ -59,3 +62,5 @@ function overThreshold(mylist, t){
 	}
 	return(over)
 }
+
+
