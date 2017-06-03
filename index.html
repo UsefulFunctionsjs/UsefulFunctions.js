@@ -76,7 +76,7 @@ These functions are simaler, yet opposites. Max returns the highest number in a 
     }<br>
   
   }<br>
-return(greatest)<br><br><br><br>
+return(greatest);<br><br><br><br>
 
 
 function min(mylist) {<br>
@@ -87,7 +87,7 @@ function min(mylist) {<br>
     }<br>
   
   }<br>
-return(least)<br>
+return(least);<br>
 }<br>
 </code>
 <br><br> <br><center><h3>Function 8: overThreshold</h3>
@@ -100,37 +100,37 @@ This functions returns how many numbers are over a threahold, t. For example, if
       over ++;<br>
     }<br>
   }<br>
-  return(over)<br>
+  return(over);<br>
 }
 </code>
 <br><br> <br><center><h3>New: Functions 9 and 10: minIndex and maxIndex</h3> 
 These functions are very simaler to each other, and to min and max (functions 6 and 7). Instead of returning the minimum and maximum numbers, though, they return the indexes of those numbers. For example, if you did minIndex([1,2,3,0,5]), it would return 3, because 3 is the index of the 0. If you did maxIndex([1,2,3,0,5]), it would return 4, because 4 is the index of the 5. <br><br><h4>Here is the code, starting with minIndex, then maxIndex:</h4><br> </center>
 <code>function minIndex(myList) {<br>
-  var least=0<br>
+  var least=0;<br>
     for (var i = 0; i < myList.length; i++) {<br>
       if(myList[i] < myList[least]){<br>
-        least=i<br>
+        least=i;<br>
       }<br>
     
     }<br>
   
-  return(least)<br>
+  return(least);<br>
 }<br><br><br><br>function maxIndex(myList) {<br>
-  var most=0<br>
+  var most=0;<br>
     for (var i = 0; i < myList.length; i++) {<br>
       if(myList[i] > myList[most]){<br>
-        most=i<br>
+        most=i;<br>
       }<br>
     
     }<br>
   
-  return(most)<br>
+  return(most);<br>
 }</code><br><br><br><center><h3>New: Function 11: median</h3>
 This function returns the median, or middle number, of a list of numbers. For example, if you did median([1,2,3]), it would return 2 because that is in the middle. If there is an even amount of indexes, it returns the average of the 2 middle numbers. For example, if you did median([1,2,3,4]), it would return 2.5.<br><br><h4> Here is the code:</h4><br></center>
 <code>function median(myList){<br>
   for(var i = 0; myList.length < 3; i++){<br>
-    var smallIndex = minIndex(myList)<br>
-    var largeIndex = maxIndex(myList)<br>
+    var smallIndex = minIndex(myList);<br>
+    var largeIndex = maxIndex(myList);<br>
     if(smallIndex != -1) {<br>
       myList.splice(smallIndex, 1);<br>
     }<br>
@@ -138,42 +138,42 @@ This function returns the median, or middle number, of a list of numbers. For ex
         myList.splice(largeIndex, 1);<br>
     }<br>
   }<br>
-return mean(myList)<br>
+return mean(myList);<br>
 }</code><br><br><br><center><h3> New: Functions 12: swap</h3>
 This function takes a list and 2 indexes(not numbers) in the list, and then returns the list with the 2 numbers swaped. For example, if you did swap([1,4,2,5,2,6,1,6,33], 0, 4), you would get [2,1,4,2,5,1,6,1,6,33].<br><br><h4> Here is the code:</h4><br></center>
 <code>function swap(myList, num1, num2) {<br>
-  var foo = myList[num1]<br>
-  var gaa = myList[num2]<br>
-  myList[num1] = gaa<br>
-  myList[num2] = foo<br>
-  return myList<br>
+  var foo = myList[num1];<br>
+  var gaa = myList[num2];<br>
+  myList[num1] = gaa;<br>
+  myList[num2] = foo;<br>
+  return myList;<br>
 }</code><br><br><br><center><h3> New: Functions 13 and 14: sSort and bubble</h3>These functions are very simaler. sSort sorts the parameter myList using the selection sort method(finding the lowest number left and moving it to a different list). bubble sorts the parameter myList using the bubble sort method(looking at 2 numbers at a time; if the first is greater than the second, swap them). The advantage of sSort is that it is much quicker than bubble. However, bubble uses less storage because it doesn't make a new list. For example, if you used either with the parameter [1,4,21,5,7], it would return [1,4,5,7,21].<br><br><h4> Here is the code, starting with sSort, then bubble:</h4><br></center>
 <code>function sSort(myList){<br>
   
  
-  var sortedArray = []<br>
-  var length = myList.length<br><br>
+  var sortedArray = [];<br>
+  var length = myList.length;<br><br>
 
   for (var i = 0; i < length; i ++) {<br>
-    var least = min(myList)<br>
-    sortedArray.push(least)<br>
+    var least = min(myList);<br>
+    sortedArray.push(least);<br>
     var index = findMinIndex(myList);<br>
   if(index != -1) {<br>
     myList.splice(index, 1);<br>
   }<br>
   }<br>
   
-  return sortedArray<br>
+  return sortedArray;<br>
 }<br><br><br><br>function bubble(myList){<br><br>
   
   for(var i = 0; i < myList.length; i++){<br>
     for(var j = 0; j < myList.length-1; j++){<br>
       if(myList[j]>myList[j+1]){<br>
-        swap(myList, j, j+1)<br>
+        swap(myList, j, j+1);<br>
       }<br>
     }<br>
   }<br>
-  return(myList)<br>
+  return(myList);<br>
   
 }
 
